@@ -16,7 +16,23 @@ type user struct {
 }
 
 func canSendMessage(mToSend messageToSend) bool {
-	// ?
+
+	if mToSend.sender.name == "" || mToSend.sender.number == 0 || mToSend.recipient.name == "" || mToSend.recipient.number == 0 {
+		return false
+	}
+	// if mToSend.sender.name == "" {
+	// 	return false
+	// }
+	// if mToSend.sender.number == 0 {
+	// 	return false
+	// }
+	// if mToSend.recipient.name == "" {
+	// 	return false
+	// }
+	// if mToSend.recipient.number == 0 {
+	// 	return false
+	// }
+
 	return true
 }
 
@@ -84,3 +100,5 @@ func main() {
 		},
 	})
 }
+
+// July 27, 2023
