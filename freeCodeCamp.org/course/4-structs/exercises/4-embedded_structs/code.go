@@ -4,7 +4,6 @@ import "fmt"
 
 type sender struct {
 	rateLimit int
-	user
 }
 
 type user struct {
@@ -44,5 +43,3 @@ func main() {
 		},
 	})
 }
-
-// July 27, 2023

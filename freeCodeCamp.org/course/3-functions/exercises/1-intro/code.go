@@ -2,13 +2,9 @@ package main
 
 import "fmt"
 
-func concat(s1, s2 string) string {
+func concat(s1, s2) string {
 	return s1 + s2
 }
-
-// func concat(s1 string, s2 string) string {
-// 	return s1 + s2
-// }
 
 // don't touch below this line
 

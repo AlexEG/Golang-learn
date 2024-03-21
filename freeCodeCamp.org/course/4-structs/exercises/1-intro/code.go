@@ -3,8 +3,6 @@ package main
 import "fmt"
 
 type messageToSend struct {
-	message     string
-	phoneNumber int
 }
 
 // don't edit below this line
@@ -28,5 +26,3 @@ func main() {
 		message:     "We're so excited to have you",
 	})
 }
-
-// July 26, 2023

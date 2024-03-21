@@ -3,9 +3,7 @@ package main
 import "fmt"
 
 func main() {
-
-	firstName, _ := getNames()
-
+	firstName, lastName := getNames()
 	fmt.Println("Welcome to Textio,", firstName)
 }
 
@@ -14,5 +12,3 @@ func main() {
 func getNames() (string, string) {
 	return "John", "Doe"
 }
-
-// July 26, 2023

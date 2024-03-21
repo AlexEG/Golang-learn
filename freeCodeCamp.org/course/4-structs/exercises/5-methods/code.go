@@ -7,10 +7,7 @@ type authenticationInfo struct {
 	password string
 }
 
-func (authInfo authenticationInfo) getBasicAuth() string {
-	// return "Authorization: Basic " + authInfo.username + ":" + authInfo.password
-	return fmt.Sprintf("Authorization: Basic %s:%s", authInfo.username, authInfo.password)
-}
+// ?
 
 // don't touch below this line
 
@@ -33,5 +30,3 @@ func main() {
 		password: "76921",
 	})
 }
-
-// July 27, 2023
