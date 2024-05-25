@@ -13,6 +13,7 @@ func test(m messageToSend) {
 	fmt.Printf("Sending message: '%s' to: %v\n", m.message, m.phoneNumber)
 	fmt.Println("====================================")
 	
+
 }
 
 func main() {
