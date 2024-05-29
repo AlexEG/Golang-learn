@@ -4,28 +4,39 @@ import (
 	"fmt"
 )
 
-func getNameCounts(names []string) map[rune]map[string]int {
-	// ?
+func getNameCounts(names []string) map[string]map[string]int {
+	c := make(map[string]map[string]int)
+	for _, n := range names {
+		if _, ok := c[n[0:1]]; !ok {
+			c[n[0:1]] = map[string]int{n: 0}
+		}
+		c[n[0:1]][n]++
+	}
+	return c
 }
 
-// don't edit below this line
+// don"t edit below this line
+//? I'd edit the code below
 
-func test(names []string, initial rune, name string) {
+func test(names []string, initial string, name string) {
 	fmt.Printf("Generating counts for %v names...\n", len(names))
 
 	nameCounts := getNameCounts(names)
 	count := nameCounts[initial][name]
-	fmt.Printf("Count for [%c][%s]: %d\n", initial, name, count)
+	// fmt.Printf("nameCounts: %v", nameCounts)
+	// fmt.Printf("count: %v", count)
+
+	fmt.Printf("Count for [%s][%s]: %d\n", initial, name, count)
 	fmt.Println("=====================================")
 }
 
 func main() {
-	test(getNames(50), 'M', "Matthew")
-	test(getNames(100), 'G', "George")
-	test(getNames(150), 'D', "Drew")
-	test(getNames(200), 'P', "Philip")
-	test(getNames(250), 'B', "Bryant")
-	test(getNames(300), 'M', "Matthew")
+	test(getNames(50), "M", "Matthew")
+	test(getNames(100), "G", "George")
+	test(getNames(150), "D", "Drew")
+	test(getNames(200), "P", "Philip")
+	test(getNames(250), "B", "Bryant")
+	test(getNames(300), "M", "Matthew")
 }
 
 func getNames(length int) []string {
