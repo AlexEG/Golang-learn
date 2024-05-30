@@ -1,7 +1,4 @@
 {
   "question": "What is hellogo in our case?",
-  "answers": [
-    "The repository/directory name",
-    "The module path prefix"
-  ]
+  "answers": ["[The repository/directory name]", "The module path prefix"]
 }

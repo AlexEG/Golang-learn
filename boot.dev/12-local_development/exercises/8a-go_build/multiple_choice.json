@@ -1,7 +1,7 @@
 {
   "question": "What happens when you run './hellogo'?",
   "answers": [
-    "'hello world' is printed",
+    "['hello world' is printed]",
     "The program panics",
     "The code compiles"
   ]
